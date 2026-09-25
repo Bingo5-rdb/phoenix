@@ -1435,3 +1435,184 @@ textarea:focus-visible {
 .calendar-page .selected-date-top h2 {
   color: #f5f5f5 !important;
 }
+/* =========================================
+   PHOENIX FOCUS
+   ========================================= */
+
+.focus-page {
+  max-width: 1100px;
+}
+
+.focus-page .page-header {
+  margin-bottom: 32px;
+}
+
+.focus-card {
+  width: 100%;
+  min-height: 520px;
+  background: #111417;
+  border: 1px solid #24282c;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.focus-label {
+  margin: 0 0 22px;
+  color: #ed7a3e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.focus-timer {
+  color: #f5f5f5;
+  font-size: clamp(64px, 10vw, 120px);
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 48px;
+}
+
+.focus-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.focus-controls button {
+  min-width: 130px;
+  min-height: 46px;
+  border-radius: 12px;
+  padding: 12px 22px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.focus-controls .primary-btn {
+  background: #ed7a3e;
+  color: #111;
+  border: 1px solid #ed7a3e;
+}
+
+.focus-controls .primary-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.focus-controls .secondary-btn {
+  background: #191c1f;
+  color: #f5f5f5;
+  border: 1px solid #30353a;
+}
+
+.focus-controls .secondary-btn:hover:not(:disabled) {
+  background: #22262a;
+}
+
+.focus-controls button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .focus-card {
+    min-height: 430px;
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  .focus-timer {
+    font-size: 54px;
+    letter-spacing: 2px;
+    margin-bottom: 38px;
+  }
+
+  .focus-controls {
+    width: 100%;
+  }
+
+  .focus-controls button {
+    min-width: 110px;
+  }
+}
+/* Focus time settings */
+
+.focus-time-setting {
+  width: min(420px, 100%);
+  margin-bottom: 34px;
+}
+
+.focus-time-setting label {
+  display: block;
+  margin-bottom: 9px;
+  color: #f5f5f5;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.focus-time-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.focus-time-input-row input {
+  flex: 1;
+  min-width: 0;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #30353a;
+  border-radius: 12px;
+  background: #191c1f;
+  color: #f5f5f5;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+.focus-time-input-row input:focus {
+  border-color: #ed7a3e;
+}
+
+.focus-time-input-row input:disabled {
+  opacity: 0.5;
+}
+
+.focus-time-input-row .secondary-btn {
+  min-width: 100px;
+}
+
+.focus-time-hint {
+  margin: 8px 0 0;
+  color: #777d84;
+  font-size: 12px;
+  text-align: left;
+}
+
+.focus-error {
+  margin: 8px 0 0;
+  color: #ed7a3e;
+  font-size: 12px;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .focus-time-input-row {
+    flex-direction: column;
+  }
+
+  .focus-time-input-row .secondary-btn {
+    width: 100%;
+  }
+}

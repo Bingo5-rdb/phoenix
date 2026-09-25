@@ -1,6 +1,7 @@
 import './App.css'
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import Calendar from './pages/Calendar'
+import Focus from './pages/Focus'
 
 function App() {
   const navigate = useNavigate()
@@ -47,10 +48,13 @@ function App() {
           <div className="nav-section">
             <p className="nav-label">TRAIN</p>
 
-            <button className="nav-item">
-              <span>◉</span>
-              Focus
-            </button>
+           <button
+  className="nav-item"
+  onClick={() => navigate('/focus')}
+>
+  <span>◉</span>
+  Focus
+</button>
 
             <button className="nav-item">
               <span>⌁</span>
@@ -429,19 +433,11 @@ function AppRouter() {
   return (
     <BrowserRouter>
 
-      <Routes>
-
-        <Route
-          path="/"
-          element={<App />}
-        />
-
-        <Route
-          path="/calendar"
-          element={<Calendar />}
-        />
-
-      </Routes>
+     <Routes>
+  <Route path="/" element={<App />} />
+  <Route path="/calendar" element={<Calendar />} />
+  <Route path="/focus" element={<Focus />} />
+</Routes>
 
     </BrowserRouter>
   )
